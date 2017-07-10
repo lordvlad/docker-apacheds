@@ -1,8 +1,8 @@
-FROM java:8
+FROM java:openjdk-8u111-alpine
 
-MAINTAINER itzg
+MAINTAINER lordvlad
 
-ENV ADS_VERSION=2.0.0-M22
+ENV ADS_VERSION=2.0.0-M24
 
 ADD http://apache.mirrors.hoobly.com//directory/apacheds/dist/${ADS_VERSION}/apacheds-${ADS_VERSION}.tar.gz /tmp/apacheds.tgz
 
