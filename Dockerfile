@@ -4,7 +4,7 @@ MAINTAINER lordvlad
 
 ENV ADS_VERSION=2.0.0-M24
 
-RUN add --update bash
+RUN add --update bash \
   && rm -rf /var/cache/apk/*
 
 ADD http://apache.mirrors.hoobly.com//directory/apacheds/dist/${ADS_VERSION}/apacheds-${ADS_VERSION}.tar.gz /tmp/apacheds.tgz
