@@ -6,6 +6,7 @@ ENV ADS_VERSION=2.0.0-M24
 
 ADD http://apache.mirrors.hoobly.com//directory/apacheds/dist/${ADS_VERSION}/apacheds-${ADS_VERSION}.tar.gz /tmp/apacheds.tgz
 
+RUN mkdir /opt
 RUN tar -C /opt -xf /tmp/apacheds.tgz && rm /tmp/apacheds.tgz
 
 ENV ADS_INSTANCES=/ads \
