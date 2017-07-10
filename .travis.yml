@@ -2,9 +2,10 @@ services:
   - docker
 
 env:
-  - DOCKER_USER=lordvlad
-  - COMMIT=${TRAVIS_COMMIT::6}
-  - REPO=lordvlad/docker-apacheds
+  global:
+    - DOCKER_USER=lordvlad
+    - COMMIT=${TRAVIS_COMMIT::6}
+    - REPO=lordvlad/docker-apacheds
  
 script:
   - docker build -f Dockerfile -t $REPO:$COMMIT .
